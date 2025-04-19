@@ -6,6 +6,8 @@ import java.awt.event.ItemEvent;
 import java.awt.event.ItemListener;
 import java.awt.font.TextAttribute;
 import java.text.ListFormat;
+
+import javax.swing.BorderFactory;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JCheckBox;
@@ -47,7 +49,7 @@ import java.util.Map;
         super("Teste da checkbox");
         setLayout(new FlowLayout());
 
-        textField = new JTextField("Veja a mudança do estilo de fonte", 20);
+        textField = new JTextField("Veja a mudança do estilo de fonte", 30);
         textField.setPreferredSize(new Dimension(200,300));
         textField.setFont(new Font("Serif", Font.PLAIN, 17));
         add(textField);
@@ -149,9 +151,9 @@ import java.util.Map;
                 } else if(alignRightBox.isSelected()){
                     textField.setHorizontalAlignment(JTextField.RIGHT);
                 }else if(aligntopbox.isSelected()){
-                    textField.setHorizontalAlignment(JTextField.TOP);
+                    textField.setBorder(BorderFactory.createEmptyBorder(0, 0, 80, 0));
                 } else if(alignBottombox.isSelected()){
-                    textField.setHorizontalAlignment(JTextField.BOTTOM);
+                    textField.setBorder(BorderFactory.createEmptyBorder(80,0,0,0));
                 }
 
                 Color color = Color.BLACK;
